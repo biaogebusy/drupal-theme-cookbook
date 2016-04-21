@@ -3,7 +3,12 @@
 
 * [Drupal Theme Cookbook](#drupal-theme-cookbook)
    * [Quick Drupal](#quick-drupal)
+      * [Install](#install)
+      * [Site Config](#site-config)
+      * [Database Settings](#database-settings)
+      ### Settings
    * [Tools](#tools)
+      * [SSH Command Used](#ssh-command-used)
 	    * [Git Command Used](#git-command-used)
 	    * [Drush](#drush)
 	      * [Drush Command Used](#drush-command-used)
@@ -11,9 +16,71 @@
 ## Quick Drupal
 *Quick install Drupal, Themes, Modules, libraries*
 
+### Install
+###https://www.drupal.org/project/drupal(https://www.drupal.org/project/drupal)
+
+```
+1: drush(#drush) dl drupal
+2: mv ...drupal... siteName
+3: cp siteName/sites/default/default.settings.php  siteName/sites/default/settings.php
+4-1: mysql -udbuser -pdbpassword
+4-2: mysql> create database sitedb
+
+```
+
+### Site Config
+```
+cp example.sites.php site.php
+$sites['dev.drupal.org'] = 'example.com';
+cp siteName/sites/default siteName/sites/default/example.com
+
+```
+
+### Database Settings
+```
+*   $databases = array (
+*     'default' =>
+*     array (
+*       'default' =>
+*       array (
+*         'database' => '',
+*         'username' => '',
+*         'password' => '',
+*         'host' => '',
+*         'port' => '',
+*         'driver' => 'mysql',
+*         'prefix' => '',
+*       ),
+*     ),
+*   );
+
+# Use default theme
+
+*   $http_host = explode('.', $_SERVER['HTTP_HOST']);
+*   if ($http_host[0] == 'm') {
+*		  $conf['site_name'] = 'mobile site';
+*     $conf['theme_default'] = 'mobile';
+*   }
+
+*   $base_url = 'http://www.example.com/drupal';
+
+# $conf['proxy_server'] = '';
+# $conf['proxy_port'] = 8080;
+# $conf['proxy_username'] = '';
+# $conf['proxy_password'] = '';
+
+```
 
 ## Tools
 *Use Editor, compiler tools, management tools, auxiliary tools to effectively handle the responsibilities*
+
+## SSH Command Used
+```
+
+#Search
+grep -r 'wenroo' modules/
+
+```
 
 ## Git Command Used
 ```
@@ -57,7 +124,7 @@ git config --global user.mail user@wenroo.com
 vi .gitignore    #Current
 vim ~/.gitconfig #Global
 
-# local sources //本地源
+# local sources #本地源
 git remote -v #View
 git remote set-url origin git@github.com:wenroo/drupal-theme-cookbook.git  #edit
 
