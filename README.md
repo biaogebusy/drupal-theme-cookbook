@@ -6,18 +6,19 @@
       * [Install](#install)
       * [Site Config](#site-config)
       * [Database Settings](#database-settings)
-      ### Settings
+      * [tpl.php](#tpl)
+      * [template.php](#template)
    * [Tools](#tools)
       * [SSH Command Used](#ssh-command-used)
-	    * [Git Command Used](#git-command-used)
-	    * [Drush](#drush)
-	      * [Drush Command Used](#drush-command-used)
+      * [Git Command Used](#git-command-used)
+      * [Drush](#drush)
+         * [Drush Command Used](#drush-command-used)
 
 ## Quick Drupal
 *Quick install Drupal, Themes, Modules, libraries*
 
 ### Install
-###https://www.drupal.org/project/drupal(https://www.drupal.org/project/drupal)
+[https://www.drupal.org/project/drupal](https://www.drupal.org/project/drupal)
 
 ```
 1: drush(#drush) dl drupal
@@ -70,6 +71,11 @@ cp siteName/sites/default siteName/sites/default/example.com
 # $conf['proxy_password'] = '';
 
 ```
+
+### Tpl files
+
+### template.php
+
 
 ## Tools
 *Use Editor, compiler tools, management tools, auxiliary tools to effectively handle the responsibilities*
