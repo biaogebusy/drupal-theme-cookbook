@@ -1,4 +1,4 @@
-# Drupal 7 Theme Cookbook
+# Drupal Theme Cookbook
 
 
 ## Drupal 7
@@ -23,7 +23,7 @@
 ### Install
 [https://www.drupal.org/project/drupal](https://www.drupal.org/project/drupal)
 
-```
+```bash
 $ drush(#drush) dl drupal
 
 $ mv drupal... siteName
@@ -34,17 +34,19 @@ $ mysql -udbuser -pdbpassword
 
 $ mysql> create database sitedb
 
-$ mkdir files #Apache need write (chmod a+w files)
+$ mkdir files
+# Apache need write (chmod a+w files)
 
 # Open in the browser
 
 ```
 
 ### Multi-site Config
-```
+```bash
 $ cp example.sites.php site.php
 
-$ $sites['dev.drupal.org'] = 'example.com';
+$ vim sites.php
+# $sites['drupal7.wenroo.com'] = 'example.com';
 
 $ cp siteName/sites/default siteName/sites/example.com
 
@@ -53,7 +55,7 @@ $ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/
 ```
 
 ### Database Settings
-```
+```php
 #  Theme Database
 
 #  $databases = array (
@@ -72,7 +74,8 @@ $ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/
 #    ),
 #  );
 
-# Theme Debug
+
+# Theme Debug (More suitable on drupal 8)
 
 # $conf['theme_debug'] = TRUE;
 
@@ -96,6 +99,14 @@ $ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/
 
 ### Theme Info
 
+* [Theme Info Core](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L5-L17)
+* [Theme Add styles](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L23-L34)
+* [Theme Add Javascripts](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L41-L43)
+* [Theme Management regions](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L49-L65)
+* [Theme Management features](https://github.com/wenroo/drupal-theme-cookbook/blob/master/
+drupal-theme-cookbook.info#L71-L81)
+* [Theme Management settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L87-L103)
+* [Info On drupal.org](https://www.drupal.org/node/171205)
 
 ### Tpl files
 
@@ -106,7 +117,7 @@ $ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/
 *Use Editor, compiler tools, management tools, auxiliary tools to effectively handle the responsibilities*
 
 ## SSH Command Used
-```
+```bash
 
 #Search
 grep -r 'wenroo' modules/
@@ -114,7 +125,7 @@ grep -r 'wenroo' modules/
 ```
 
 ## Git Command Used
-```
+```bash
 git clone
 git pull
 git status  #check
@@ -174,7 +185,7 @@ git svn dcommit #Push
 * [Drush Command Used](#drush-command-used)
 
 ## Drush Command Used
-```
+```bash
 #Export database
 drush sql-dump > ./db.sql
 

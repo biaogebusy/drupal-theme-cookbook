@@ -6,15 +6,18 @@
 screenshot  = screenshot.png
 
 ; Theme Name
-name        = WENUI / Drupal Web Theme
+name        = Drupal Theme Cookbook / WENUI
 
 ; Theme Description
-description = Give front-end framework for faster and easier web development.
+description = Faster and easier web development.
 
 ; Theme info
-version     = V1.0.0
+version     = 2.0.0
 core        = 7.x
 engine      = phptemplate
+
+
+
 
 
 ; Add style files
@@ -31,9 +34,17 @@ stylesheets[print][] = css/print.css
 ; stylesheets[screen and (max-width: 1024px)][] = table.css
 
 
+
+
+
+
 ; Add JavaScripts files.
 
 scripts[] = init.js
+
+
+
+
 
 ; Drupal Regions
 
@@ -55,6 +66,8 @@ regions[outside]        = Outside
 
 
 
+
+
 ; Default features
 
 features[] = logo
@@ -66,6 +79,9 @@ features[] = comment_user_verification
 features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
+
+
+
 
 
 ; Set settings on the theme-settings.php.
@@ -85,6 +101,11 @@ settings[toggle_comment_user_verification] = 1
 ; Add Custom meta if need
 ; mobi / pc
 ; settings[mobi_meta][] = mobi
+
+
+
+
+
 
 
 ; Exclude CSS JS
