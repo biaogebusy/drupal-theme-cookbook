@@ -1,6 +1,5 @@
 # Drupal Theme Cookbook
 
-
 ## Drupal 7
 
 * [Drupal Theme Cookbook](#drupal-theme-cookbook)
@@ -8,13 +7,42 @@
       * [Install](#install)
       * [Multi-site Config](#multi-site-config)
       * [Database Settings](#database-settings)
-      * [Theme Info](#info)
-      * [tpl.php](#tpl)
-      * [template.php](#template)
+      * [Theme Info](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md)
+        * [Set Theme information](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#theme-config)
+         * [Set theme name](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#theme-name)
+         * [Set theme Description](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#theme-description)
+         * [Set theme Others](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#theme-description) - Set theme version,
+      core, engine  
+       * [Add style files](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#Add-style-files)
+         * [Gobal style](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#gobal-style)
+         * [Print style](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#print-style)
+         * [Responsive style](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#responsive-style)
+       * [Add javascript files](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#Add-javascript-files)
+       * [Set Regions](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#drupal-regions)
+         * [Default region](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#default-region)
+         * [Custom region](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#custom-region)
+       * [Set features](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#Set-features)
+         * [Default Features](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#default-features)
+       * [Set Theme settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#set-theme-settings)
+         * [Add Theme default settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#add-theme-default-settings)
+         * [Add Theme custom settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#add-theme-custom-settings)
+       * [Exclude CSS and JS](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#exclude-css-and-js)
+         * [Exclude javascript](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#exclude-javascript)
+         * [Exclude css](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#exclude-css)
+           * [Exclude system css](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#exclude-system-css)
+           * [Exclude modules css](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/INFO.md#exclude-modules-css)
+       * [Drupal theme info Documents](https://www.drupal.org/node/171205)
+   * [Theme Develment](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md)
+     * [Install devel module](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#install-devel-module)
+     * [Custom theme settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#custom-theme-settings)
+       * [Add rebuild theme Control button](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#theme-rebuild-control-button)
    * [Tools](#tools)
       * [SSH Command Used](#ssh-command-used)
       * [Git Command Used](#git-command-used)
-      * [Drush](#drush)
+      * [Drush]
+         * [Drush Install](http://www.drush.org/en/master/) - A command line shell and Unix scripting interface for Drupal
+         * [Drush Commands](http://drushcommands.com/) - Drupal6, Drupal7, Drupal8
+         * [Drush Drupal Quickup](https://github.com/Paulmicha/drupal-quickup/blob/master/drupal_setup.sh) - Drush map
          * [Drush Command Used](#drush-command-used)
 
 ## Quick Drupal
@@ -56,31 +84,31 @@ $ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/
 
 ### Database Settings
 ```php
+
 #  Theme Database
 
-#  $databases = array (
-#    'default' =>
-#    array (
-#      'default' =>
-#      array (
-#        'database' => '',
-#        'username' => '',
-#        'password' => '',
-#        'host' => '',
-#        'port' => '',
-#        'driver' => 'mysql',
-#        'prefix' => '',
-#      ),
-#    ),
-#  );
+$databases = array (
+'default' =>
+   array (
+     'default' =>
+     array (
+       'database' => '',
+       'username' => '',
+       'password' => '',
+       'host' => '',
+       'port' => '',
+       'driver' => 'mysql',
+       'prefix' => '',
+     ),
+   ),
+);
 
 
 # Theme Debug (More suitable on drupal 8)
-
 # $conf['theme_debug'] = TRUE;
 
 
-# Use default theme
+# m.site.com use mobi theme
 
 #  $http_host = explode('.', $_SERVER['HTTP_HOST']);
 #  if ($http_host[0] == 'm') {
@@ -88,30 +116,7 @@ $ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/
 #    $conf['theme_default'] = 'mobile';
 #  }
 
-# $base_url = 'http://www.example.com/drupal';
-
-# $conf['proxy_server'] = '';
-# $conf['proxy_port'] = 8080;
-# $conf['proxy_username'] = '';
-# $conf['proxy_password'] = '';
-
 ```
-
-### Theme Info
-
-* [Theme Info Core](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L5-L17)
-* [Theme Add styles](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L23-L34)
-* [Theme Add Javascripts](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L41-L43)
-* [Theme Management regions](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L49-L65)
-* [Theme Management features](https://github.com/wenroo/drupal-theme-cookbook/blob/master/
-drupal-theme-cookbook.info#L71-L81)
-* [Theme Management settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/drupal-theme-cookbook.info#L87-L103)
-* [Info On drupal.org](https://www.drupal.org/node/171205)
-
-### Tpl files
-
-### Template.php
-
 
 ## Tools
 *Use Editor, compiler tools, management tools, auxiliary tools to effectively handle the responsibilities*
@@ -178,12 +183,6 @@ git svn dcommit #Push
 ```
 
 
-## Drush
-* [Drush Install](http://www.drush.org/en/master/) - A command line shell and Unix scripting interface for Drupal
-* [Drush Commands](http://drushcommands.com/) - Drupal6, Drupal7, Drupal8
-* [Drush Drupal Quickup](https://github.com/Paulmicha/drupal-quickup/blob/master/drupal_setup.sh) - Drush map
-* [Drush Command Used](#drush-command-used)
-
 ## Drush Command Used
 ```bash
 #Export database
@@ -219,12 +218,3 @@ drush arr
 drush make --no-core file.make.yml ../../
 
 ```
-
-
-
-
-
-
-
-
-
