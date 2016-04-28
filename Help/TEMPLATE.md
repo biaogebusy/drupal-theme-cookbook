@@ -6,8 +6,8 @@
   * [Unset drupal system or modules CSS](#unset-drupal-css) - *Must be required [Get Info Function](#get-theme-info)*
   * [Override Drupal Default Print](#override-drupal-default-print)
   * [Hide/Change First Time With Front Page](#hook-first-time-message)
-  * [Region template by UI](region-template-by-ui)
-  * [Block template by UI](block-template-by-ui)
+  * [Region template by UI](#region-template-by-ui)
+  * [Block template by UI](#block-template-by-ui)
 
 ## Template Setting and Hook
 *hook system template print and add custom print*
@@ -130,7 +130,7 @@ function themeName_item_list($variables) {
 ### Hook first time Message
 *remove 'No front page content has been created yet.' Display*
 ```php
-function cookbook_preprocess_page(&$variables, $hook) {
+function themeName_preprocess_page(&$variables, $hook) {
 
   if($variables['is_front']){
     // Remove
@@ -144,7 +144,7 @@ function cookbook_preprocess_page(&$variables, $hook) {
 
 ### Region template by UI
 ```php
-function linkmedp2_preprocess_region(&$variables, $hook) {
+function themeName_preprocess_region(&$variables, $hook) {
   // Change region template.
 	$grid_wrapper = array(
     'header',
