@@ -1,11 +1,14 @@
-# Drupal Theme Cookbook
+# Drupal 7 Theme Cookbook
 
+
+## Drupal 7
 
 * [Drupal Theme Cookbook](#drupal-theme-cookbook)
    * [Quick Drupal](#quick-drupal)
       * [Install](#install)
-      * [Site Config](#site-config)
+      * [Multi-site Config](#multi-site-config)
       * [Database Settings](#database-settings)
+      * [Theme Info](#info)
       * [tpl.php](#tpl)
       * [template.php](#template)
    * [Tools](#tools)
@@ -21,49 +24,68 @@
 [https://www.drupal.org/project/drupal](https://www.drupal.org/project/drupal)
 
 ```
-1: drush(#drush) dl drupal
-2: mv ...drupal... siteName
-3: cp siteName/sites/default/default.settings.php  siteName/sites/default/settings.php
-4-1: mysql -udbuser -pdbpassword
-4-2: mysql> create database sitedb
+$ drush(#drush) dl drupal
+
+$ mv drupal... siteName
+
+$ cp siteName/sites/default/default.settings.php  siteName/sites/default/settings.php
+
+$ mysql -udbuser -pdbpassword
+
+$ mysql> create database sitedb
+
+$ mkdir files #Apache need write (chmod a+w files)
+
+# Open in the browser
 
 ```
 
-### Site Config
+### Multi-site Config
 ```
-cp example.sites.php site.php
-$sites['dev.drupal.org'] = 'example.com';
-cp siteName/sites/default siteName/sites/default/example.com
+$ cp example.sites.php site.php
+
+$ $sites['dev.drupal.org'] = 'example.com';
+
+$ cp siteName/sites/default siteName/sites/example.com
+
+$ cp siteName/sites/example.com/defaule.settings.php siteName/sites/example.com/settings.php
 
 ```
 
 ### Database Settings
 ```
-*   $databases = array (
-*     'default' =>
-*     array (
-*       'default' =>
-*       array (
-*         'database' => '',
-*         'username' => '',
-*         'password' => '',
-*         'host' => '',
-*         'port' => '',
-*         'driver' => 'mysql',
-*         'prefix' => '',
-*       ),
-*     ),
-*   );
+#  Theme Database
+
+#  $databases = array (
+#    'default' =>
+#    array (
+#      'default' =>
+#      array (
+#        'database' => '',
+#        'username' => '',
+#        'password' => '',
+#        'host' => '',
+#        'port' => '',
+#        'driver' => 'mysql',
+#        'prefix' => '',
+#      ),
+#    ),
+#  );
+
+# Theme Debug
+
+# $conf['theme_debug'] = TRUE;
+
 
 # Use default theme
 
-*   $http_host = explode('.', $_SERVER['HTTP_HOST']);
-*   if ($http_host[0] == 'm') {
-*		  $conf['site_name'] = 'mobile site';
-*     $conf['theme_default'] = 'mobile';
-*   }
+#  $http_host = explode('.', $_SERVER['HTTP_HOST']);
+#  if ($http_host[0] == 'm') {
+# 	   $conf['site_name'] = 'mobile site';
+#    $conf['theme_default'] = 'mobile';
+#  }
 
-*   $base_url = 'http://www.example.com/drupal';
+# $base_url = 'http://www.example.com/drupal';
 
 # $conf['proxy_server'] = '';
 # $conf['proxy_port'] = 8080;
@@ -72,9 +94,12 @@ cp siteName/sites/default siteName/sites/default/example.com
 
 ```
 
+### Theme Info
+
+
 ### Tpl files
 
-### template.php
+### Template.php
 
 
 ## Tools
