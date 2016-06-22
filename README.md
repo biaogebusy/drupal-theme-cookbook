@@ -222,4 +222,6 @@ drush arr
 # Make Download
 drush make --no-core file.make.yml ../../
 
+# Revert Features
+drush features-revert-all
 ```
