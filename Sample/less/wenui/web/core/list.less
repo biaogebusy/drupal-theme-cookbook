@@ -1,0 +1,58 @@
+/* =============================================================================
+   List
+   ========================================================================== */
+ul{
+  margin-top:0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  &.menu,
+  &.list{
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;
+    li{
+      list-style:none;
+      list-style-image:none;
+    }
+  }
+  li{
+  }
+}
+
+
+/* list */
+.list{
+  ul&{
+    li{
+    }
+  }
+  dl&{
+    margin:0;
+    dd{
+      margin: 0;
+    }
+  }
+  >.list-item{
+    .inside;
+    .g-in;
+  }
+}
+
+.menu{
+  li{
+    float: left;
+    a{
+
+    }
+  }
+}
+/* media */
+.media-min{
+  width: 45px;
+  height: 45px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}

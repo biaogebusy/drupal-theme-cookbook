@@ -1,0 +1,55 @@
+@import (less) "../../../../bower_components/jquery-ui/themes/base/autocomplete.css";
+
+.ui-autocomplete-loading {
+  background: white url("../images/loading.gif") 260px center no-repeat;
+}
+.ui-autocomplete-input{
+  display: block;
+}
+.ui-autocomplete-top{
+  .box-shadow(0px -1px 2px #d5d5d5);
+}
+.ui-autocomplete{
+  .g-in;
+  background-color: #ffffff;
+  border-top:1px solid #9f9f9f;
+  .box-shadow(0 1px 2px #d5d5d5);
+  display: block;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  li{
+    display: block;
+    h2{
+      border-bottom: 1px solid #d5d5d5;
+      color:#cccccc;
+      font-size:@font-size;
+      line-height: 1;
+      padding:7px 15px;
+      display: block;
+    }
+    .item{
+      display: block;
+      margin-left: 9px;
+    }
+    .row{
+      border-bottom: 1px solid #d5d5d5;
+      margin-right: 0;
+      margin-left: 0;
+      padding: 7px 7px 7px 0;
+      h3{
+        color:@site-base-color;
+        font-size: @font-size-small;
+        line-height: 20px;
+        padding:0 0 5px 0;
+      }
+      p{
+        font-size: @font-size;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

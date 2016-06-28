@@ -1,0 +1,66 @@
+/* ============
+   Select2
+   ============ */
+@import (less) "../../../../bower_components/select2/dist/css/select2.min.css";
+
+select.select2-hidden-accessible{
+  .opacity(0);
+  padding:0 7px;
+}
+.select2-container--default{
+  min-width: 100px;
+  font-size: 12px;
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: @btn-bg;
+  }
+  .select2-selection--single{
+    border-color: @border-color;
+    height: 32px;
+    outline: none;
+    .select2-selection__rendered{
+      line-height: 32px;
+    }
+    .select2-selection__arrow{
+      height: 30px;
+    }
+  }
+  .select2-selection--multiple{
+    border-color: @border-color;
+    .select2-selection__rendered{
+      .select2-selection__choice{
+        background-color: @btn-bg;
+        border-color: transparent;
+        color:@btn-color;
+        margin-top: 6px;
+        position: relative;
+        padding-right: 21px;
+        .select2-selection__choice__remove{
+          right: 0;
+          top: -2px;
+          position: absolute;
+          font-size: 150%;
+          color: #ffffff;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  &:focus,
+  &.select2-container--focus{
+    .select2-selection--single{
+      border-color: @btn-bg;
+    }
+    .select2-selection--multiple{
+      border-color: @btn-bg;
+    }
+  }
+}
+
+.select2-dropdown--below{
+}
+.select2-container--open{
+  .select2-dropdown--below{
+    border:1px solid @site-base;
+  }
+}
+

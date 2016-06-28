@@ -1,0 +1,37 @@
+{
+  "name": "WenUI Plugins",
+  "version": "1.2.0",
+  "authors": [
+    "魏巍 <hello@wenroo.com>"
+  ],
+  "description": "javascript packages",
+  "main": "index.js",
+  "keywords": [
+    "wenroo",
+    "wenui",
+    "html",
+    "symfony",
+    "drupal",
+    "weixin",
+    "tempalte"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "all-animation": "git@github.com:all-animation/all-animation.git#~2.1.2",
+    "jquery-ui": "git@github.com:jquery/jquery-ui.git#~1.11.4",
+    "ScrollToFixed": "https://github.com/bigspotteddog/ScrollToFixed.git#^1.0.6",
+    "jQuery-One-Page-Nav": "https://github.com/davist11/jQuery-One-Page-Nav.git#^3.0.0",
+    "swiper": "~2.7.6",
+    "qtip2": "git@github.com:qTip2/qTip2.git#^3.0.2",
+    "perfect-scrollbar": "^0.6.11",
+    "select2": "^4.0.2"
+  }
+}

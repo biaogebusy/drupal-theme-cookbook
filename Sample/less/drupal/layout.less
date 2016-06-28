@@ -1,0 +1,29 @@
+
+body{
+  &.one-sidebar{
+    .column{
+      float: left;
+    }
+    #content{
+      width: 100%;
+      .section{
+        width: auto;
+        min-height: 350px;
+      }
+    }
+  }
+  &.sidebar-first{
+    #content{
+      .section{
+        margin-left: 230px;
+      }
+    }
+  }
+  #sidebar-first{
+    float: left;
+    width: 210px;
+    margin-left: -100%;
+  }
+}
+
+

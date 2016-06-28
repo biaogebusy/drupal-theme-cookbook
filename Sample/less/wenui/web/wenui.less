@@ -1,0 +1,189 @@
+@import "../icons.less";
+
+@import "./core/mixins.less";
+@import "./core/button.less";
+@import "./core/form.less";
+@import "./core/list.less";
+@import "./core/table.less";
+
+
+@import "./component/messages.less";
+@import "./component/badge.less";
+/* ========================================
+   Core
+   ======================================== */
+@global-color:             #000;
+@global-color-darker:      lighten(@global-color, 13.5%); // #222
+@global-color-dark:        lighten(@global-color, 20%);   // #333
+@global-color-base:        lighten(@global-color, 33.5%); // #555
+@global-color-light:       lighten(@global-color, 46.7%); // #777
+@global-color-lighter:     lighten(@global-color, 93.5%); // #eee
+
+
+@color-status:             #18a55d;
+@color-status-bg:          #e0eaf6;
+@color-success:            #169554;
+@color-success-bg:         #f4f5f9;
+@color-Warning:            #f19b2c;
+@color-Warning-bg:         #fcf8e3;
+@color-error:              #a94442;
+@color-error-bg:           #f2dede;
+
+/* classes */
+@space:      14px;
+@space-min:  @space / 2;
+
+.outside-t{ margin-top:    @space; }
+.outside-r{ margin-right:  @space; }
+.outside-b{ margin-bottom: @space; }
+.outside-l{ margin-left:   @space; }
+.outside-tb{
+  .outside-t;
+  .outside-b;
+}
+.outside-lr{
+  .outside-r;
+  .outside-l;
+}
+.outside{
+  .outside-tb;
+  .outside-lr;
+}
+
+.outside-min-l{ margin-left:   @space-min; }
+.outside-min-r{ margin-right:  @space-min; }
+.outside-min-t{ margin-top:    @space-min; }
+.outside-min-b{ margin-bottom: @space-min; }
+.outside-min-lr{
+  .outside-min-l;
+  .outside-min-r;
+}
+.outside-min-tb{
+  .outside-min-t;
+  .outside-min-b;
+}
+.outside-min{
+  .outside-min-tb;
+  .outside-min-lr;
+}
+
+.inside-t{ padding-top:    @space; }
+.inside-r{ padding-right:  @space; }
+.inside-b{ padding-bottom: @space; }
+.inside-l{ padding-left:   @space; }
+.inside-lr{
+  .inside-r;
+  .inside-l;
+}
+.inside-tb{
+  .inside-t;
+  .inside-b;
+}
+.inside{
+  .inside-tb;
+  .inside-lr;
+}
+
+.inside-min-t{ padding-top:    @space-min; }
+.inside-min-r{ padding-right:  @space-min; }
+.inside-min-b{ padding-bottom: @space-min; }
+.inside-min-l{ padding-left:   @space-min; }
+.inside-min-lr{
+  .inside-min-r;
+  .inside-min-l;
+}
+.inside-min-tb{
+  .inside-min-t;
+  .inside-min-b;
+}
+.inside-min{
+  .inside-min-tb;
+  .inside-min-lr;
+}
+
+
+.g-c{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.t-c{
+  text-align: center;
+}
+.t-r{
+  text-align: right;
+}
+.t-l{
+  text-align: left;
+}
+.f-l{
+  float: left;
+}
+.f-r{
+  float: right;
+}
+
+.d_l{
+  display: inline;
+}
+.d_b{
+  display: block;
+}
+.d_ib{
+  display: inline-block;
+}
+
+
+
+/* ========================================
+   Labels
+   ======================================== */
+@import "./component/labels.less";
+
+// /* labels */
+// @label-color:              #ffffff;
+// @label-border-color:       #aaaaaa;
+// @label-bg-color:           #dddddd;
+// @label-icon-color:         #aaaaaa;
+
+// @label-info-bg:            #00a652;
+// @label-success-bg:         #ffcb1f;
+// @label-fail-bg:            #dddddd;
+
+/* ========================================
+   Reads
+   ======================================== */
+@import "./component/reads.less";
+
+/* ========================================
+   Talk
+   ======================================== */
+// @import "./component/talk.less";
+
+
+/* ========================================
+   Modules
+   ======================================== */
+@import "./modules/bootstrap-grid.less";
+@import "./modules/bootstrap-collapse.less";
+@import "./modules/bootstrap-tab.less";
+// @import "./modules/bootstrap-dropdown.less";
+@import "./modules/bootstrap-modal.less";
+
+// @import "./modules/jqueryui-autocomplete.less";
+
+// @import "./modules/bootstrap-datepicker.less";
+@import "./modules/select2.less";
+// @import "./modules/waves.less";
+// @import "./modules/swiper3.less";
+// @import "./modules/datatable.less";
+// @import "./modules/treetable.less";
+// @import "./modules/jqgrid.less";
+// @import "./modules/grumble.less";
+@import "./modules/qtip2.less";
+@import "./modules/perfect-scrollbar.less";
+
+
+
+
+

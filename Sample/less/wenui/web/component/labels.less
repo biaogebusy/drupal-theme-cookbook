@@ -1,0 +1,25 @@
+/* =============================================================================
+   Labels
+   ========================================================================== */
+.labels{
+  padding-bottom: 15px;
+  .label{
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    padding:10px 20px;
+    display: inline-block;
+    margin-right: .1px;
+    margin-top: 15px;
+    &.label-base{
+      background-color: @label-bg-color;
+      border-color: @label-border-color;
+      >i{
+        color:@label-icon-color;
+      }
+    }
+    >i{
+      font-size: 102%;
+      margin-top: 3px;
+    }
+  }
+}

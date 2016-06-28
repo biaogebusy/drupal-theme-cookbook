@@ -1,0 +1,59 @@
+// tab
+.panel-tabs{
+  .tab-menu{
+    display: block;
+    .clearfix;
+    li{
+      .g-in;
+      float: left;
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      background-image: url(../images/o-50.png);
+      background-repeat: repeat;
+      a,span{
+        .btn;
+        display: block;
+        color:#ffffff;
+        font-size:21px;
+        padding: 14px;
+        text-decoration: none;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      &.active,
+      span{
+        background-image: url(../images/o-90.png);
+        a{
+          cursor: default;
+        }
+      }
+    }
+  }
+  .tab-content{
+    background-image: url(../images/o-90.png);
+    background-repeat: repeat;
+    border-top: 1px solid #4e4e4b;
+    clear: both;
+    overflow: hidden;
+    .tab-pane{
+      display: none;
+      padding: 35px;
+    }
+    .active{
+      display: block;
+    }
+  }
+}
+.tab-pane-empty{
+  font-size: 135%;
+  .inside;
+  text-align: center;
+  i{
+    display: inline;
+    padding-right: 7px;
+    font-size: 150%;
+    line-height: 1;
+  }
+}

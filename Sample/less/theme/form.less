@@ -1,0 +1,356 @@
+/* Form */
+body{
+  &.logged-in{
+    form{
+      >div{
+        //element
+        label{
+          font-weight: normal;
+        }
+        .form-select{
+          width: 210px;
+          &:focus{
+            border-color: @site-base;
+          }
+        }
+        .form-text{
+          width: 310px;
+          &:focus{
+            border-color: @site-base;
+          }
+        }
+        input.form-text-short,
+        .form-text-short input{
+          width: 60px;
+        }
+        a.button{
+          .btn;
+          .btn-base;
+        }
+        input.remove{
+          .btn-error;
+        }
+        .form-warpper-time{
+          .clearfix;
+          .form-item{
+            float: left;
+          }
+          .label-from-to{
+            .f-l;
+            .outside-min-tb;
+            .inside-min-lr;
+            line-height: 29px;
+            color: #000000;
+          }
+        }
+        .form-type-checkboxes,
+        .form-type-radios{
+        }
+        .date-float,
+        .form-item,
+        .form-wrapper,
+        .form-checkboxes,
+        .form-radios{
+          .clearfix;
+          .form-type-radio,
+          .form-type-checkbox{
+            margin: 0 14px 0 0;
+            float: left;
+            label{
+              display: inline;
+              width: auto;
+              float: none;
+            }
+            .form-radio,
+            .form-checkbox{
+            }
+            .form-radio{
+            }
+            .form-checkbox{
+
+            }
+          }
+        }
+        .form-wrapper{
+          >.form-type-radio,
+          >.form-type-checkbox{
+            float: none;
+            clear: both;
+          }
+        }
+        .addressfield-lbs-link{
+          a{
+            .btn;
+            .btn-second;
+          }
+          margin-left: 14px;
+        }
+        .field-type-text-long{
+        }
+        .field-type-text,
+        .form-type-select,
+        .form-type-textfield{
+          .description{
+            display: none;
+          }
+        }
+        .ief-entity-delta{
+          width: 50px;
+        }
+        .field-type-datestamp{
+          .outside;
+          .inside;
+          border:1px solid @border-color;
+          .form-submit{
+            margin: 0 7px;
+          }
+        }
+        td{
+          .field-type-datestamp{
+            margin:0;
+            padding: 0;
+            border:none;
+          }
+          .ief-entity-operations{
+            .form-submit{
+              margin:0 3px;
+            }
+          }
+          .form-item{
+            margin: 7px;
+          }
+        }
+        .form-item{
+          margin: 14px;
+          label{
+            line-height: 32px;
+            display: block;
+            float: left;
+            width: 110px;
+            margin:0 14px 0 0;
+          }
+          table{
+            label{
+              line-height: 1;
+            }
+          }
+          .description{
+            font-size: 12px;
+            line-height: 120%;
+            color:#aaaaaa;
+            margin-left: 124px;
+          }
+        }
+        .date-no-float{
+          float: left;
+          .form-text{
+            width: 100px;
+          }
+          label{
+            width: auto;
+            padding-left: 14px;
+          }
+          .form-item{
+            float: left;
+            margin: 0 !important;
+          }
+          .date-padding{
+            float: left;
+          }
+          .description{
+            display: none;
+          }
+        }
+        div.form-wrapper{
+          .form-item {
+            label{
+            }
+          }
+        }
+        fieldset.form-wrapper{
+          .outside;
+          position: relative;
+          border:1px solid #d4d4d4;
+          legend{
+            .fieldset-legend{
+              padding: 0 14px;
+            }
+          }
+          .fieldset-wrapper{
+            .fieldset-description{
+              display: none;
+            }
+            .form-item{
+              margin: 7px 0;
+              label{
+                margin-left: 0;
+              }
+            }
+            .form-type-radio,
+            .form-type-checkbox{
+              margin-top: 0;
+            }
+            table{
+              width: 100%;
+            }
+          }
+        }
+        fieldset#edit-select{
+          border:none;
+          width: 100%;
+          legend{
+            display: none;
+          }
+          .form-type-select{
+            float: left;
+            margin-right: 7px;
+          }
+          .fieldset-wrapper{
+            clear: both;
+            overflow: hidden;
+            .form-submit{
+              margin: 8px 8px 8px 0;
+            }
+          }
+        }
+        .text-format-wrapper{
+          position: relative;
+          padding-top: 21px;
+          .wysiwyg-toggle-wrapper{
+            text-align: right;
+            position: absolute;
+            top:0;
+            right: 14px;
+            a{
+              .btn;
+              .btn-base;
+            }
+          }
+          .edui-editor{
+            .g-in;
+            .radius-base(4px 4px 0 0);
+          }
+          .form-type-textarea{
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+          .filter-wrapper{
+            border-color:#d4d4d4;
+            border-top: none;
+            margin-top: 0;
+          }
+        }
+        .field-widget-entityreference-view-widget{
+          border:1px solid @border-color;
+          border-left:3px solid @btn-bg-second;
+          padding:14px;
+          margin-bottom: 14px;
+          .g-in;
+          .form-item{
+            margin-bottom: 0;
+          }
+        }
+        // Group
+        .form-actions{
+          .outside;
+          .form-submit{
+            font-size: 14px;
+            padding:10px 28px;
+            &.save:before{
+              .icon;
+              content:"\e601";
+              margin-right: -28px;
+              margin-left: 14px;
+            }
+            #edit-delete{
+              .btn-error;
+            }
+          }
+          .btn,
+          .form-submit{
+            margin-right: 7px;
+          }
+        }
+        #edit-actions{
+          input,a{
+            margin-right: 14px;
+          }
+          a{
+            .btn;
+            .btn-gray;
+            .radius-base;
+            font-size: 14px;
+            padding:10px 28px;
+          }
+        }
+        table{
+          margin-top: 21px;
+          border:1px solid @border-color;
+          th{
+            .form-item{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.address-address{
+  .content{
+    width: 840px;
+    .g-in;
+    .outside;
+    min-height: 580px;
+    background-color: #f1f1f1;
+    border:1px solid @border-color;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    .field{
+      background-color: #f1f1f1;
+      border-bottom:1px solid @border-color;
+      width: 300px;
+      margin-left: 540px;
+      .g-in;
+      .inside;
+      .field-label{
+        color:#777777;
+        font-weight: bold;
+        margin-bottom: 7px;
+      }
+    }
+    .field-name-field-location{
+      background-color: #f1f1f1;
+      float: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 540px;
+      margin-left: 0;
+      border-right: 1px solid @border-color;
+    }
+  }
+}
+
+
+
+/* Form moadl */
+body{
+  .form-modal{
+    .modal-dialog{
+      width: 85%;
+      margin-top: 7.5%;
+      form{
+        .form-text{
+          .radius-base;
+          border-color:#cccccc;
+        }
+      }
+    }
+  }
+}
+
+
+

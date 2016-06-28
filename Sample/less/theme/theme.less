@@ -1,0 +1,191 @@
+@import "./blocks.less";
+@import "./panel.less";
+@import "./view.less";
+@import "./fields.less";
+@import "./form.less";
+@import "./page.less";
+
+/* =============================================================================
+   Theme style
+   ========================================================================== */
+@font-face {
+  font-family: 'icons';
+  src: url('//at.alicdn.com/t/font_1467103300_1431293.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1467103300_1431293.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1467103300_1431293.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1467103300_1431293.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1467103300_1431293.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.icon{
+  .wenui;
+  font-family: 'icons';
+}
+
+.btn i{
+  font-family: 'icons';
+}
+
+
+/* Sites */
+@site-base:               #ffcb1f;
+@site-green:              #00a652;
+
+/* Base */
+@bg-base:                 #f2f2f0;
+@bg-light:                #f9f9f9;
+@bg-lighter:              #f7f9fa;
+@font-family:             "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+
+/* Text */
+@text-color:               #585657; /* @global-color-dark; */
+@text-color-light:         #4e4e4e;
+@text-color-lighter:       #bcbcbc;
+
+/* Link */
+@link-color:               @global-color-dark;
+@link-color-light:         #b9b9b9;
+
+/* border */
+@border-color:             #f2f2f2;
+
+/* button */
+@btn-color:                #333333;
+@btn-bg:                   @site-base;
+
+@btn-color-second:         #ffffff;
+@btn-bg-second:            #323433;
+
+/* table active */
+@table-active:             #00a652;
+
+/* icon */
+@icon-mark:                #666666;
+
+/* toolbar */
+@navbar-bg:                #323433;
+@navbar-color:             #ffffff;
+
+/* toolbar */
+@toolbar-bg:               #323433;
+@toolbar-color:            #ffffff;
+
+/* loading */
+@loading-color:            #e54c2d;
+
+/* form */
+@value-color:              #666666;
+
+
+// Labels
+@label-color:              @text-color-light;
+@label-border-color:       #dcdedd;
+@label-bg-color:           #dcdedd;
+@label-icon-color:         #aaaaaa;
+
+@label-info-bg:            #00a652;
+@label-success-bg:         #ffcb1f;
+@label-fail-bg:            #dddddd;
+
+
+/* Classes */
+.bg-white{
+  background-color: #ffffff;
+}
+.bg-base{
+  background-color:@bg-base;
+}
+.bg-site-base{
+  background-color:@site-base;
+}
+.color-red{
+  color:@site-base;
+}
+.underline{
+  text-decoration: underline;
+}
+
+/* Custom Theme */
+.sticky-table{
+  width: 100%;
+}
+
+/* loading */
+.loading{
+  background-color: rgba(255, 255, 255, 0.75);
+  background-image: url(../images/loading2.gif);
+  background-repeat: no-repeat;
+  .radius-base(14px);
+  width: 125px;
+  height: 110px;
+  .t-c;
+  .x-y-m;
+}
+
+
+//Label Card
+.labels{
+  font-size: @font-size-mini;
+  position: relative;
+  margin-left:-3px;
+  margin-right:-3px;
+  .label{
+    padding:5px 10px;
+    margin: 3px;
+  }
+}
+
+
+.label-card{
+  .radius-base;
+  text-align: center;
+  .text-shadow(1px 0 1px #cccccc);
+  strong{
+    .text-ellipsis();
+    display: block;
+    font-size: 30px;
+    line-height: 200%;
+  }
+  samp{
+    .text-ellipsis();
+    display: block;
+    line-height: 150%;
+  }
+}
+.label-card-status{
+  background-color: @color-status;
+  color:#ffffff;
+}
+.label-card-error{
+  background-color: @color-error;
+  color:#ffffff;
+}
+.label-card-warning{
+  background-color: @color-Warning;
+  color:#ffffff;
+}
+.row{
+  .label-card{
+    margin: 5px 0;
+  }
+}
+.label-card-samp{
+  position: relative;
+  padding-bottom: 30px;
+  samp{
+    .radius-base(0 4px 0 4px);
+    .g-in;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3px;
+    height: 30px;
+    line-height: 24px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
