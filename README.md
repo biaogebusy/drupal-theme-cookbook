@@ -31,6 +31,11 @@
       * [Install devel module](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#install-devel-module)
       * [Custom theme settings](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#custom-theme-settings)
         * [Add rebuild theme Control button](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#theme-rebuild-control-button)
+      * [Use Drupal JS Function](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#drupal-javascript-function)
+        * [drupal.encodePath()](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#encodePath)
+        * [drupal.absoluteUrl()](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#absoluteUrl)
+        * [drupal.checkPlain()](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#checkPlain)
+        * [drupal.t()](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/DEV.md#t)
    * [Tempalte Settings and  hook](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/TEMPLATE.md)
       * [Get theme path](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/TEMPLATE.md#get-theme-path)
       * [Include files](https://github.com/wenroo/drupal-theme-cookbook/blob/master/Help/TEMPLATE.md#include-files)
@@ -213,6 +218,9 @@ drush uli
 
 # Change password
 drush upwd root --password="****"
+
+# 用户登录超过5次锁定解除
+drush sqlq "DELETE FROM flood"
 
 # Overall backup
 drush ard

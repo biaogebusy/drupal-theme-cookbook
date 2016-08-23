@@ -10,6 +10,49 @@
 
 [Developer documentation](http://ratatosk.net/drupal/tutorials/debugging-drupal.html) - Come from module developer
 
+## Drupal javascript function
+    -- Console All --
+    > console.log(window.Drupal)
+
+### EncodePath
+    var url = window.location.href;
+    console.log(url);
+    console.log(Drupal.encodePath(url));
+
+    -- PRINT --
+    > http://localhost:81/home
+    > http%3A//localhost%3A81/home
+
+
+### AbsoluteUrl
+    var url = window.location.href;
+    console.log(url);
+    console.log(Drupal.absoluteUrl().arguments);
+
+    -- PRINT --
+    > http://localhost:81/home
+    > http://localhost:81/home/undefined
+
+### CheckPlain
+    var test = '<p>my</p>';
+    console.log(test);
+    console.log(Drupal.checkPlain(test));
+
+    -- PRINT --
+    > <p>my</p>
+    > &lt;p&gt;my&lt;/p&gt;
+
+### T
+        var text = Drupal.t('All');
+        console.log(text);
+        console.log(Drupal.checkPlain(test));
+
+        -- PRINT --
+        localhost/cn
+        > 全部
+        localhost/en
+        > All
+
 ## Custom theme settings
 *Add drupal theme setting with myself*
 
